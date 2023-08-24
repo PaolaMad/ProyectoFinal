@@ -1,0 +1,352 @@
+a{
+    text-decoration: none;
+}
+
+.header{
+    position: static;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+
+}
+
+.nav{
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.nav,
+.nav_items{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.nav_logo,
+.nav_link{
+    color: #fff;
+}
+
+.nav_logo{
+    color: #fff;
+    font-size: 25px;
+}
+
+.nav_item{
+    column-gap: 25px;
+    margin-right: 40px;
+
+}
+
+.nav_link:hover {
+    color: #d9d9d9;
+}
+
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+.button{
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.container_form{
+    font-family: 'Poppins', sans-serif;
+    max-width: 700PX;
+    width: 100%;
+    padding: 25px 30px;
+    margin-left: 24%;
+    margin-top: 4%;
+    border: 2px solid rgba(255,255,2550,5);
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.container-back {
+    font-family: 'Poppins', sans-serif;
+    max-width: 700PX;
+    width: 100%;
+    padding: 25px 30px;
+    margin-left: 24%;
+    margin-top: 4%;
+    justify-content: center;
+    align-content: center;
+}
+
+.container_form .title{
+    font-size: 25px;
+    font-weight:500;
+    position: relative;
+    color: #fff;
+}
+
+.container_form  .title::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width:30px;
+}
+
+.container_form form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form .user-details .input-box{
+    margin: 20px 0 12px 0;
+    width: calc(100%/2 - 20px);
+}
+
+.user-details .input-box .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    margin-bottom: 7px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+
+}
+
+.user-details .input-box select {
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    margin-bottom: 7px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+
+
+form .gender-details .gender-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+.gender-details .category label {
+    display: flex;
+    color: #fff;
+}
+
+.gender-details .category .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two{
+    border-color: #d9d9d9;
+    background: #9b59b6;
+}
+
+form input[type="radio"]{
+    display: none;
+}
+
+form .boton {
+    margin-top: 20px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #AED6F1, #5DADE2);
+}
+
+.boton-back{
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #AED6F1, #5DADE2);
+}
+
+form .boton-edit {
+    margin-top: 20px;
+    margin-right: 20px;
+    height: 40px;
+    width: 45%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #AED6F1, #5DADE2);
+}
+
+form .boton-cancell {
+    margin-top: 20px;
+    height: 40px;
+    width: 45%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(107.2deg, rgb(150, 15, 15) 10.6%, rgb(247, 0, 0) 91.1%);
+}
+
+ul li ul.dropdown {
+
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(52 211 153);
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li:hover ul.dropdown{
+
+    display: block;
+
+}
+
+form .boton:hover {
+        background: linear-gradient(-135deg, #AED6F1, #5DADE2);
+}
+
+.boton-back:hover {
+    background: linear-gradient(-135deg, #AED6F1, #5DADE2);
+}
+
+form .boton-edit:hover {
+    background: linear-gradient(-135deg, #AED6F1, #5DADE2);
+}
+
+form .boton-cancell:hover {
+    background: linear-gradient(-107.2deg, rgb(150, 15, 15) 10.6%, rgb(247, 0, 0) 91.1%);
+}
+
+@media (max-width: 584px){
+    .container{
+        max-width: 100%;
+    }
+}
+
+.icon {
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 5px 5px;
+    outline: none;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+.blueIcon {
+    background: #33E6FF;
+}
+
+.greenIcon {
+    background: #71EA17;
+}
+
+
+.redIcon {
+    background: #F50F0F;
+}
+
+form .user-details .input-box-dpt {
+    margin: 20px 0 12px 0;
+    width: calc(100% - 20px);
+}
+
+.user-details .input-box-dpt .details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.user-details .input-box-dpt input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    margin-bottom: 7px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box-dpt select {
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border-radius: 5px;
+    color: #fff;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    margin-bottom: 7px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}

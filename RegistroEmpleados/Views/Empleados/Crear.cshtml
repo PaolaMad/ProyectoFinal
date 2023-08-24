@@ -1,0 +1,88 @@
+﻿@model Empleado
+
+@{
+    ViewData["Title"] = "Añadiendo un empleado"; 
+}
+
+<h1 class="font flex items-center justify-center text-xl">@ViewData["Title"]</h1>
+
+<div class="container ml-auto mr-auto flex items-center justify-center">
+    <div class="w-full md:w-1/2">
+        
+        @*Formulario*@
+        <form class="bg-white px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+
+                @*Nombre*@
+                <div class="grid grid-flow-row sm:grid-flow-col gap-3 mt-3">
+                    <div class="sm:col-span-4 justify-center">
+
+                        <label class="blockquote text-gray-700 text-sm font-bold mb-2" for="nya">Nombre</label>
+                        <input asp-for="Nombre" class="shadow apperance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight visually-hidden-focusableoutline-none focus:shadow-outline" 
+                        />
+
+                    </div>
+
+                </div>
+
+
+                @*Edad*@
+                <div class="grid grid-flow-row sm:grid-flow-col gap-3 mt-3">
+                    <div class="sm:col-span-4 justify-center">
+
+                        <label class="blockquote text-gray-700 text-sm font-bold mb-2" for="nya">Edad</label>
+                        <input asp-for="Edad" class="shadow apperance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight visually-hidden-focusableoutline-none focus:shadow-outline" />
+
+                    </div>
+
+                </div>
+
+                @*Sexo*@
+                <div class="grid grid-flow-row sm:grid-flow-col gap-3 mt-3">
+                    <div class="sm:col-span-4 justify-center">
+
+                        <label class="blockquote text-gray-700 text-sm font-bold mb-2" for="nya">Sexo</label>
+                        <input asp-for="Sexo" class="shadow apperance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight visually-hidden-focusableoutline-none focus:shadow-outline" />
+
+                    </div>
+                </div>
+
+
+                @*Email*@
+                <div class="grid grid-flow-row sm:grid-flow-col gap-3 mt-3">
+                    <div class="sm:col-span-4 justify-center">
+
+                        <label class="blockquote text-gray-700 text-sm font-bold mb-2" for="nya">Email</label>
+                        <input asp-for="Email" class="shadow apperance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight visually-hidden-focusableoutline-none focus:shadow-outline" />
+
+                    </div>
+                </div>
+
+
+                @*Email*@
+                <div class="grid grid-flow-row sm:grid-flow-col gap-3 mt-3">
+                    <div class="sm:col-span-4 justify-center">
+
+                        <label class="blockquote text-gray-700 text-sm font-bold mb-2" for="nya">Telefono</label>
+                        <input asp-for="Telefono" class="shadow apperance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight visually-hidden-focusableoutline-none focus:shadow-outline" />
+
+                    </div>
+                </div>
+
+
+                @*Departamento*@
+                <div class="grid grid-flow-row sm:grid-flow-col gap-3 mt-3">
+                    <div class="sm:col-span-4 justify-center">
+
+                        <label class="blockquote text-gray-700 text-sm font-bold mb-2" for="nya">Departamento</label>
+                        <input asp-for="DepartamentoId" class="shadow apperance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight visually-hidden-focusableoutline-none focus:shadow-outline" />
+
+                    </div>
+                </div>
+
+
+            </div>
+        </form>
+
+    </div>
+</div>

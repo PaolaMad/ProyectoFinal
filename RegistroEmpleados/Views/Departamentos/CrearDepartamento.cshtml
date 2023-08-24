@@ -1,0 +1,40 @@
+﻿@model Departamento
+
+@{
+    ViewData["Title"] = "Añadiendo Departamento";
+}
+
+<div class="container_form">
+
+    <div class="title">Registro</div>
+
+    <div asp-validation-summary="ModelOnly" class="text-red-500	"></div>
+
+    <form asp-action="CrearDepartamento"> 
+
+        <div class="user-details">
+
+
+            <div class="input-box-dpt">
+                <span class="details" asp-for="Nombre">Nombre</span>
+                <input asp-for="Nombre" class="input-dept" />
+                <span asp-validation-for="Nombre" class="text-red-500"></span>
+            </div>
+
+        </div>
+
+        <div>
+            <button class="boton" type="submit">Añadir Departamento</button>
+        </div>
+
+    </form>
+
+
+
+</div>
+
+@section Scripts{
+
+    <partial name="_ValidationScriptsPartial"></partial>
+
+}

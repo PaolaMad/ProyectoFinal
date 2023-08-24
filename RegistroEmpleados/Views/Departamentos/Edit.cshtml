@@ -1,0 +1,45 @@
+﻿@model Departamento
+
+@{
+
+    ViewData["Title"] = "Editando Departamento";
+
+}
+
+<div class="container_form">
+
+    <div class="title">Editar</div>
+
+    <div asp-validation-summary="ModelOnly" class="text-red-500	"></div>
+
+    <form asp-action="Edit">
+
+        <input asp-for="Id" type="hidden"/>
+
+        <div class="user-details">
+
+
+            <div class="input-box-dpt">
+                <span class="details" asp-for="Nombre">Nombre</span>
+                <input asp-for="Nombre" class="input-dept" />
+                <span asp-validation-for="Nombre" class="text-red-500"></span>
+            </div>
+
+        </div>
+
+        <div>
+            <button class="boton-edit" type="submit">Actualizar</button>
+            <button class="boton-cancell" asp-action="ListaDepartamento">Cancelar</button>
+        </div>
+
+    </form>
+
+
+
+</div>
+
+@section Scripts{
+
+    <partial name="_ValidationScriptsPartial"></partial>
+
+}

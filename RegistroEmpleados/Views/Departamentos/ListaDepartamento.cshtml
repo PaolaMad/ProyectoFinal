@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Departamento>
+
+@{
+
+    ViewData["Title"] = "Lista de Departamentos";
+
+}
+
+<div class="container flex justify-center items-center mt-20">
+
+    <table class="shadow-2x1 font-[Poppins] border-2 border-cyan-200 w-6/12 overflow-hidden">
+        <thead class="text-white">
+            <tr class="items-center">
+
+                <th class="py-3 bg-cyan-800">Nombre</th>
+                <th class="py-3 bg-cyan-800">Acciones</th>
+
+            </tr>
+        </thead>
+
+        <tbody class="text-center">
+
+            @foreach (var dpt in Model)
+            {
+
+                <tr class="border-solid border-2 border-cyan-200">
+
+                    <td class="text-white py-3 px-6">
+
+                        @dpt.Nombre
+
+                    </td>
+
+                    <td class="py-3 flex flex-row">
+
+                        <input type="hidden" value="@dpt.Id" class="ids" />
+                        <a class="hover:bg-green-300 bg-green-500 p-4 btn icon flex-1 hover:scale-105 duration-300"
+                        asp-action="Edit" asp-route-id="@dpt.Id">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </a>
+
+                        <a class="hover:bg-red-300 bg-red-600 p-4 btn icon flex-1 hover:scale-105 duration-300"
+                           asp-action="Eliminar" asp-route-id="@dpt.Id">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </a>
+
+                    </td>
+
+                </tr>
+
+            }
+
+        </tbody>
+
+    </table>
+
+</div>

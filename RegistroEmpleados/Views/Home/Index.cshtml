@@ -1,0 +1,78 @@
+﻿@model DepartamentoViewModel
+
+@{
+    ViewData["Title"] = "Page";
+}
+
+
+<div class="container_form">
+
+    <div class="title">Registro</div>
+    
+    <div asp-validation-summary="ModelOnly" class="text-red-500	"></div>
+
+    <form asp-action="Index">
+
+        <div class="user-details">
+
+
+            <div class="input-box">
+                <span class="details" asp-for="Nombre">Nombre</span>
+                <input asp-for="Nombre"/>
+                <span asp-validation-for="Nombre" class="text-red-500"></span>
+            </div>
+
+            <div class="input-box">
+                <span class="details" asp-for="Edad">Edad</span>
+                <input asp-for="Edad" />
+                <span asp-validation-for="Edad" class="text-red-500	"></span>
+            </div>
+
+            <div class="input-box">
+                <span class="details" asp-for="Sexo">Sexo</span>
+                <select asp-for="Sexo">
+
+                    <option class="select-option text-black" value="">Seleccione su Sexo</option>
+                    <option class="select-option text-black" value="Hombre">Hombre</option>
+                    <option class="select-option text-black" value="Mujer">Mujer</option>
+
+                </select>
+                <span asp-validation-for="Sexo" class="text-red-500	"></span>
+            </div>
+
+            <div class="input-box">
+                <span class="details" asp-for="Telefono">Teléfono</span>
+                <input asp-for="Telefono" />
+                <span asp-validation-for="Telefono" class="text-red-500	"></span>
+            </div>
+
+            <div class="input-box">
+                <span class="details" asp-for="Email">Correo Electrónico</span>
+                <input asp-for="Email"/>
+                <span asp-validation-for="Email" class="text-red-500"></span>
+            </div>
+
+            <div class="input-box">
+                <span class="text-black details">Departamento</span>
+                <select asp-for="DepartamentoId" asp-items="Model.Departamentos"></select>
+                <span asp-validation-for="DepartamentoId" class="text-red-500"></span>
+            </div>
+
+            
+        </div>
+
+        <div>
+            <button class="boton" type="submit">Añadir</button>
+        </div>
+
+    </form>
+    
+        
+
+        </div>
+
+@section Scripts{
+
+    <partial name="_ValidationScriptsPartial"></partial>
+
+}

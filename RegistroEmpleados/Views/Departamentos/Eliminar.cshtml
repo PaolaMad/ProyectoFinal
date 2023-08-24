@@ -1,0 +1,30 @@
+﻿@model Departamento
+
+@{
+
+    ViewData["Title"] = "Eliminar Empleado";
+
+}
+
+<div class="container_form">
+
+    <div class="title">Esta seguro que desea eliminar el registro del departamento: @Model.Nombre ?</div>
+
+    <div asp-validation-summary="ModelOnly" class="text-red-500	"></div>
+
+    <form asp-action="EliminarDepartamento">
+
+        <input type="hidden" asp-for="Id" />
+
+        <div>
+
+            <button class="boton-cancell mx-3" type="submit">Eliminar</button>
+            <button class="boton-edit" asp-action="ListaDepartamento">Cancelar</button>
+
+        </div>
+
+    </form>
+
+
+
+</div>
